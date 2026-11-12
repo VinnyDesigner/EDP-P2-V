@@ -6,11 +6,11 @@
     <title>Abu Dhabi EDP — Environmental Data Portal | EAD</title>
     <meta name="description" content="Abu Dhabi Environmental Data Portal (EDP) by the Environment Agency – Abu Dhabi (EAD). Explore real-time air quality, marine habitats, soil conservation, and 24+ AI environmental platforms." />
     <meta name="theme-color" content="#000000" />
-    <script type="module" crossorigin src="/assets/navigation-DiPJwl4U.js?v=edp-v18"></script>
-    <script type="module" crossorigin src="/assets/ContactDialog-DOlj7i4z.js?v=edp-v18"></script>
-    <script type="module" crossorigin src="/assets/main-7Jk9ujX-.js?v=edp-v18"></script>
-    <link rel="stylesheet" crossorigin href="/assets/navigation-BQ5-cxHW.css?v=edp-v18">
-    <link rel="stylesheet" crossorigin href="/assets/ContactDialog-BPD9mSvP.css?v=edp-v18">
+    <script type="module" crossorigin src="/assets/navigation-DiPJwl4U.js?v=edp-v19"></script>
+    <script type="module" crossorigin src="/assets/ContactDialog-DOlj7i4z.js?v=edp-v19"></script>
+    <script type="module" crossorigin src="/assets/main-7Jk9ujX-.js?v=edp-v19"></script>
+    <link rel="stylesheet" crossorigin href="/assets/navigation-BQ5-cxHW.css?v=edp-v19">
+    <link rel="stylesheet" crossorigin href="/assets/ContactDialog-BPD9mSvP.css?v=edp-v19">
     <link rel="stylesheet" crossorigin href="/assets/main-DAiTGXDI.css">
         <style>
       :root {
@@ -977,26 +977,39 @@
 
 
 <script>
-// Capture phase click listener for Hero buttons: Applications and Catalogues
+// Capture phase click listener for all Applications and Catalogues triggers
 window.addEventListener('click', function(e) {
-  const btn = e.target.closest('a.btn, a[href="#applications"], a[href="#catalogues"], button.btn');
+  const btn = e.target.closest('a, button');
   if (!btn) return;
   const href = (btn.getAttribute('href') || '').toLowerCase();
   const text = (btn.textContent || '').trim().toLowerCase();
 
-  if (href === '#applications' || text === 'applications' || text === 'application') {
+  // Check if it's an Applications button
+  if (
+    href === '#applications' ||
+    text.includes('explore edp') ||
+    text.includes('edp application') ||
+    text === 'applications' ||
+    text === 'application' ||
+    text.includes('تطبيقات')
+  ) {
     e.preventDefault();
     e.stopPropagation();
     e.stopImmediatePropagation();
-    console.log('[EDP] Opening Applications panel');
+    console.log('[EDP] Opening Applications panel via:', text || href);
     if (typeof window.openEdpPanel === 'function') {
       window.openEdpPanel('applications');
     }
-  } else if (href === '#catalogues' || text === 'catalogues' || text === 'catalogue') {
+  } else if (
+    href === '#catalogues' ||
+    text === 'catalogues' ||
+    text === 'catalogue' ||
+    text.includes('أدلة')
+  ) {
     e.preventDefault();
     e.stopPropagation();
     e.stopImmediatePropagation();
-    console.log('[EDP] Opening Catalogues panel');
+    console.log('[EDP] Opening Catalogues panel via:', text || href);
     if (typeof window.openEdpPanel === 'function') {
       window.openEdpPanel('catalogues');
     }
