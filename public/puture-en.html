@@ -6,10 +6,10 @@
     <title>Abu Dhabi EDP — Environmental Data Portal | EAD</title>
     <meta name="description" content="Abu Dhabi Environmental Data Portal (EDP) by the Environment Agency – Abu Dhabi (EAD). Explore real-time air quality, marine habitats, soil conservation, and 24+ AI environmental platforms." />
     <meta name="theme-color" content="#000000" />
-    <script type="module" crossorigin src="/assets/navigation-DiPJwl4U.js?v=edp-v5"></script>
-    <script type="module" crossorigin src="/assets/ContactDialog-DOlj7i4z.js?v=edp-v5"></script>
-    <script type="module" crossorigin src="/assets/main-7Jk9ujX-.js?v=edp-v5"></script>
-    <link rel="stylesheet" crossorigin href="/assets/navigation-BQ5-cxHW.css">
+    <script type="module" crossorigin src="/assets/navigation-DiPJwl4U.js?v=edp-v11"></script>
+    <script type="module" crossorigin src="/assets/ContactDialog-DOlj7i4z.js?v=edp-v11"></script>
+    <script type="module" crossorigin src="/assets/main-7Jk9ujX-.js?v=edp-v11"></script>
+    <link rel="stylesheet" crossorigin href="/assets/navigation-BQ5-cxHW.css?v=edp-v11">
     <link rel="stylesheet" crossorigin href="/assets/ContactDialog-BPD9mSvP.css">
     <link rel="stylesheet" crossorigin href="/assets/main-DAiTGXDI.css">
         <style>
@@ -342,11 +342,430 @@
         box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4) !important;
         transform: translateX(4px) !important;
       }
-</style>
+
+      /* ========================================================= */
+      /* STRICT PERMANENT DARK LUXURY THEME - NO LIGHT THEME ALLOWED */
+      /* ========================================================= */
+      html,
+      body {
+        background-color: #020b09 !important;
+        color: #f0fdf4 !important;
+      }
+
+      /* CRITICAL: Frames, scenes, and chapters MUST remain transparent so the 3D WebGL stage is fully visible */
+      .page,
+      .page.is-light,
+      main,
+      .scene,
+      .scene__frame,
+      .scene__frame.chapter--light,
+      .scene__frame.chapter--dark,
+      [data-chapter],
+      #work,
+      #about,
+      #welcome,
+      #process,
+      #contact {
+        background-color: transparent !important;
+        background: transparent !important;
+      }
+
+      /* Disable all white background overlays */
+      .work-award:before,
+      .work-award.is-in:before {
+        display: none !important;
+        opacity: 0 !important;
+        background: transparent !important;
+        visibility: hidden !important;
+      }
+
+      /* Work / Applications Section Typography in Dark Obsidian Theme */
+      .work-award__title,
+      .beat__title,
+      .chapter--light .beat__title,
+      .chapter--light .work-award__title {
+        color: #ffffff !important;
+        text-shadow: 0 2px 20px rgba(0, 0, 0, 0.9), 0 0 40px rgba(16, 185, 129, 0.25) !important;
+      }
+      .work-award__title em {
+        color: #10b981 !important;
+        background: linear-gradient(135deg, #34d399, #10b981);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      /* Work Award Box Luxury Styling */
+      .work-award__box {
+        background: rgba(3, 22, 18, 0.94) !important;
+        border: 1px solid rgba(197, 160, 89, 0.45) !important;
+        border-radius: 16px !important;
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(16, 185, 129, 0.15) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        color: #d1fae5 !important;
+      }
+      .work-award__kicker {
+        color: #c5a059 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.08em !important;
+      }
+      .work-award__about {
+        color: #d1fae5 !important;
+      }
+      .work-award__facts {
+        border-top: 1px solid rgba(197, 160, 89, 0.25) !important;
+      }
+      .work-award__facts dt {
+        color: #c5a059 !important;
+        font-weight: 600 !important;
+      }
+      .work-award__facts dd {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+      }
+
+      /* Section 02 Floating Badge */
+      .chapter--light .label__text,
+      .label__text--dark {
+        background: rgba(3, 22, 18, 0.95) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(16, 185, 129, 0.4) !important;
+      }
+
+      /* Invert light theme header & markers */
+      .is-light .site-header,
+      .site-header {
+        color: #f0fdf4 !important;
+      }
+      .is-light .site-header:before,
+      .site-header:before {
+        background: linear-gradient(rgba(2, 11, 9, 0.92) 40%, rgba(2, 11, 9, 0)) !important;
+      }
+
+      .chapter--light .muted {
+        color: #94a3b8 !important;
+      }
+      .chapter--light .beat__intro {
+        color: #a7f3d0 !important;
+      }
+      .is-light .chapter-dots__name {
+        background: rgba(3, 22, 18, 0.95) !important;
+        color: #ffffff !important;
+      }
+      .is-light .chapter-dots__mark {
+        background: rgba(255, 255, 255, 0.25) !important;
+      }
+      .is-light .chapter-dots__item.is-active .chapter-dots__mark {
+        background: #10b981 !important;
+        box-shadow: 0 0 14px rgba(16, 185, 129, 0.8) !important;
+      }
+      .is-light .type-lines {
+        color: #6ee7b7 !important;
+      }
+      .is-light .type-lines__line:first-child {
+        color: #ffffff !important;
+      }
+      .is-light .route__track {
+        stroke: rgba(16, 185, 129, 0.35) !important;
+      }
+      .is-light .route__node {
+        fill: #041215 !important;
+        stroke: #10b981 !important;
+      }
+      .is-light .route__head {
+        fill: #10b981 !important;
+      }
+      .is-light .cursor-cta__bubble {
+        color: #ffffff !important;
+        background: linear-gradient(135deg, #005844, #10b981) !important;
+      }
+
+    
+      /* ========================================================= */
+      /* HIGH CONTRAST CARD TYPOGRAPHY & VISIBILITY ENHANCEMENTS */
+      /* ========================================================= */
+
+      /* Feature Cards (About EDP) */
+      .feature-card,
+      .feature-card.edp-premium-card {
+        background: linear-gradient(168deg, rgba(3, 24, 20, 0.96), rgba(4, 34, 28, 0.94)) !important;
+        border: 1px solid rgba(197, 160, 89, 0.45) !important;
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.75), 0 0 20px rgba(16, 185, 129, 0.15) !important;
+        color: #ffffff !important;
+      }
+      .feature-card h3,
+      .feature-card__title {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8) !important;
+      }
+      .feature-card p,
+      .feature-card__body {
+        color: #d1fae5 !important;
+        font-size: 15px !important;
+        line-height: 1.65 !important;
+      }
+      .feature-card__tags li,
+      .edp-card-tags li {
+        color: #6ee7b7 !important;
+        background: rgba(16, 185, 129, 0.18) !important;
+        border: 1px solid rgba(16, 185, 129, 0.35) !important;
+        font-weight: 600 !important;
+      }
+      .feature-card__more,
+      .edp-card-btn {
+        color: #f0fdf4 !important;
+        border-top: 1px solid rgba(197, 160, 89, 0.3) !important;
+      }
+
+      /* Step / Process Cards (Data Lifecycle) */
+      .step,
+      .step--dark,
+      .step--light {
+        background: rgba(3, 24, 20, 0.95) !important;
+        border: 1px solid rgba(197, 160, 89, 0.45) !important;
+        border-radius: 16px !important;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.85), 0 0 30px rgba(16, 185, 129, 0.18) !important;
+        backdrop-filter: blur(16px) !important;
+        -webkit-backdrop-filter: blur(16px) !important;
+        color: #ffffff !important;
+      }
+      .step__title {
+        color: #ffffff !important;
+        text-shadow: 0 2px 16px rgba(0, 0, 0, 0.9), 0 0 30px rgba(16, 185, 129, 0.25) !important;
+      }
+      .step__body {
+        color: #d1fae5 !important;
+        font-size: 16px !important;
+        line-height: 1.65 !important;
+      }
+      .step__log,
+      .step .type-lines,
+      .step--dark .type-lines,
+      .step--light .type-lines {
+        background: rgba(1, 15, 12, 0.85) !important;
+        border: 1px solid rgba(16, 185, 129, 0.25) !important;
+        border-radius: 8px !important;
+        padding: 12px 16px !important;
+        color: #a7f3d0 !important;
+      }
+      .step__log .type-lines__line:first-child,
+      .step .type-lines__line:first-child {
+        color: #c5a059 !important;
+        font-weight: 700 !important;
+      }
+      .step__progress li {
+        background: rgba(255, 255, 255, 0.22) !important;
+      }
+      .step__progress li.is-on {
+        background: #10b981 !important;
+        box-shadow: 0 0 12px #10b981 !important;
+      }
+
+      /* Hero Title & Slogan Styling */
+      .hero__slogan {
+        color: #c5a059 !important;
+        font-weight: 700 !important;
+        letter-spacing: 0.12em !important;
+        text-shadow: 0 0 16px rgba(197, 160, 89, 0.4) !important;
+      }
+      .hero__title {
+        color: #ffffff !important;
+        text-shadow: 0 4px 24px rgba(0, 0, 0, 0.9), 0 0 50px rgba(16, 185, 129, 0.3) !important;
+        font-weight: 500 !important;
+      }
+      .hero__side p {
+        color: #d1fae5 !important;
+      }
+
+    
+      /* ========================================================= */
+      /* CENTER-ALIGNED ROUNDED RECTANGULAR GLASSMORPHISM NAVBAR   */
+      /* ========================================================= */
+      .site-header {
+        position: fixed !important;
+        top: 20px !important;
+        left: 50% !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: translateX(-50%) !important;
+        width: min(94vw, 1120px) !important;
+        height: 64px !important;
+        padding: 8px 20px 8px 18px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        gap: 20px !important;
+        background: rgba(3, 20, 16, 0.78) !important;
+        backdrop-filter: blur(20px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+        border: 1px solid rgba(197, 160, 89, 0.4) !important;
+        border-radius: 9999px !important;
+        box-shadow: 0 16px 45px rgba(0, 0, 0, 0.7), 0 0 28px rgba(16, 185, 129, 0.16) !important;
+        z-index: 99999 !important;
+        transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+
+      .site-header:before {
+        display: none !important;
+      }
+
+      /* Logo inside navbar */
+      .site-header a[href="#welcome"] {
+        display: flex !important;
+        align-items: center !important;
+        padding-left: 4px !important;
+      }
+      .site-header .edp-main-logo {
+        height: 38px !important;
+        width: auto !important;
+        display: block !important;
+        filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.6)) !important;
+      }
+
+      /* Centered Nav Links */
+      .site-header .nav-links {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 6px !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        list-style: none !important;
+      }
+
+      .site-header .nav-links__item {
+        color: #d1fae5 !important;
+        font-size: 14px !important;
+        font-weight: 500 !important;
+        letter-spacing: 0.02em !important;
+        padding: 9px 18px !important;
+        border-radius: 9999px !important;
+        text-decoration: none !important;
+        transition: all 0.25s ease !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        gap: 0 !important;
+      }
+
+      .site-header .nav-links__item:hover {
+        color: #ffffff !important;
+        background: rgba(16, 185, 129, 0.2) !important;
+        box-shadow: 0 0 14px rgba(16, 185, 129, 0.35) !important;
+      }
+
+      /* Remove Plus Icons completely */
+      .nav-links__plus,
+      .site-header .nav-links__item svg,
+      .site-header .nav-links__plus {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        height: 0 !important;
+      }
+
+      /* Language Toggle Button inside navbar */
+      .site-header .lang-toggle,
+      .site-header .menu-button {
+        border-radius: 9999px !important;
+      }
+
+      /* ========================================================= */
+      /* ENHANCED ROUNDED GRADIENT BUTTONS                         */
+      /* ========================================================= */
+      .btn,
+      .btn--primary,
+      .btn--ghost,
+      .btn--sm,
+      .edp-card-btn,
+      .feature-card__more,
+      .work-panel__action,
+      .hero__actions .btn {
+        border-radius: 9999px !important;
+        font-weight: 600 !important;
+        letter-spacing: 0.02em !important;
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+      }
+
+      /* Primary Rounded Gradient Button */
+      .btn--primary,
+      .site-header .btn--primary,
+      .hero__actions .btn--primary,
+      .work-award__box .btn--primary {
+        background: linear-gradient(135deg, #10b981 0%, #059669 45%, #005844 100%) !important;
+        color: #ffffff !important;
+        border: 1px solid rgba(197, 160, 89, 0.5) !important;
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.3) !important;
+        padding-inline: 24px !important;
+      }
+
+      .btn--primary:hover,
+      .site-header .btn--primary:hover,
+      .hero__actions .btn--primary:hover,
+      .work-award__box .btn--primary:hover {
+        background: linear-gradient(135deg, #34d399 0%, #10b981 45%, #059669 100%) !important;
+        color: #ffffff !important;
+        border-color: rgba(245, 200, 107, 0.9) !important;
+        box-shadow: 0 10px 32px rgba(16, 185, 129, 0.7), 0 0 20px rgba(197, 160, 89, 0.6) !important;
+        transform: translateY(-2px) !important;
+      }
+
+      /* Ghost Rounded Gradient Button */
+      .btn--ghost,
+      .hero__actions .btn--ghost {
+        background: linear-gradient(135deg, rgba(3, 24, 20, 0.88) 0%, rgba(5, 36, 28, 0.72) 100%) !important;
+        color: #f0fdf4 !important;
+        border: 1px solid rgba(197, 160, 89, 0.5) !important;
+        backdrop-filter: blur(14px) !important;
+        -webkit-backdrop-filter: blur(14px) !important;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+        padding-inline: 24px !important;
+      }
+
+      .btn--ghost:hover,
+      .hero__actions .btn--ghost:hover {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.3) 0%, rgba(197, 160, 89, 0.25) 100%) !important;
+        border-color: #c5a059 !important;
+        color: #ffffff !important;
+        box-shadow: 0 8px 24px rgba(16, 185, 129, 0.45), 0 0 16px rgba(197, 160, 89, 0.45) !important;
+        transform: translateY(-2px) !important;
+      }
+
+      /* Navbar Small CTA Button */
+      .site-header .btn--sm {
+        height: 38px !important;
+        padding-inline: 20px !important;
+        font-size: 13.5px !important;
+        border-radius: 9999px !important;
+      }
+
+      /* Card Action Buttons */
+      .feature-card__more,
+      .edp-card-btn {
+        border-radius: 9999px !important;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(197, 160, 89, 0.22) 100%) !important;
+        border: 1px solid rgba(197, 160, 89, 0.5) !important;
+        color: #ffffff !important;
+        padding: 12px 24px !important;
+      }
+      .feature-card__more:hover,
+      .edp-card-btn:hover {
+        background: linear-gradient(135deg, #059669 0%, #c5a059 100%) !important;
+        color: #041215 !important;
+        border-color: #dfba73 !important;
+        box-shadow: 0 6px 22px rgba(16, 185, 129, 0.5) !important;
+        transform: translateX(4px) !important;
+      }
+
+    </style>
   </head>
   <body>
-    <div id="root"><div class="prerender"><header><a href="/"><img src="/edplogo.svg" alt="Environment Agency – Abu Dhabi" style="height:42px;width:auto" /></a><nav><a href="#about">About EDP</a> <a href="#work">Applications</a> <a href="#process">Data Lifecycle</a> <a href="#studio">Catalogues</a> <a href="#contact">Contact EAD</a></nav></header><main><section><h1>We build interactive experiences with AI. Experiences, engineered.</h1><p>Interactive environmental intelligence and AI platforms for Abu Dhabi. Real-time data, spatial analysis and ecological conservation across the Emirate.</p></section><section><h2>Environmental Intelligence for Abu Dhabi.</h2><p>The Environmental Data Portal (EDP) by the Environment Agency – Abu Dhabi (EAD) unifies comprehensive environmental intelligence across air quality, marine habitats, soil conservation, and biodiversity.</p><p>Data without action is invisible. Real-time environmental intelligence drives sustainable governance.</p><ul><li><h3>Environmental Portals</h3><p>Real-time monitoring networks for air quality, groundwater, marine ecosystems, and protected nature reserves across Abu Dhabi.</p><p>Air Quality · Enviroportal · Groundwater</p></li><li><h3>AI Conservation Services</h3><p>Interactive lifelike AI avatars (Souheil & Dana), environmental chatbot advisory, and predictive ecological models powered by machine learning.</p><p>EAD Avatar · Chatbot · AI Insights</p></li><li><h3>Biodiversity Catalogues</h3><p>Comprehensive digital registries of terrestrial and marine species, spatial habitat distribution maps, and environmental compliance indices.</p><p>Abu Dhabi Nature · Naha · Biodiversity</p></li></ul></section><section><h2>24+ Specialized Environmental Platforms Powering Abu Dhabi’s Ecological Leadership</h2><p>What is the EDP?: The Environmental Data Portal (EDP) is Abu Dhabi’s official environmental data gateway, providing open scientific datasets, real-time indicators, and APIs for researchers, decision-makers, and the public.</p><ul><li>Governed by: EAD · Abu Dhabi</li><li>Coverage: Terrestrial & Marine</li><li>Platforms: 24+ Live Systems</li></ul><ul><li><h3><a href="https://avatar.ead.ae/">EAD Avatar AI</a></h3><p>Environment Agency – Abu Dhabi</p><p>Interactive bilingual AI ambassadors Souheil & Dana delivering verified environmental education.</p></li><li><h3><a href="https://envirobot.ead.ae/">Environmental Chatbot</a></h3><p>Environment Agency – Abu Dhabi</p><p>Instant conversational AI advisory for environmental regulations, licensing, and conservation guidance.</p></li><li><h3><a href="https://enviroportal.ead.ae/">Enviroportal Spatial Map</a></h3><p>Environment Agency – Abu Dhabi</p><p>Comprehensive GIS explorer mapping terrestrial ecosystems, marine zones, and environmental telemetry.</p></li><li><h3><a href="https://airquality.ead.ae/">Air Quality Portal</a></h3><p>Environment Agency – Abu Dhabi</p><p>Emirate-wide real-time air quality index monitoring across 20+ specialized stations streaming PM2.5, ozone, and meteorological parameters.</p></li><li><h3><a href="https://adnature.ead.ae/">Abu Dhabi Nature</a></h3><p>Environment Agency – Abu Dhabi</p><p>Citizen-science wildlife discovery app reporting UAE native fauna and flora observations.</p></li><li><h3><a href="https://naha.ead.ae/">Naha Sustainability</a></h3><p>Environment Agency – Abu Dhabi</p><p>Incentivized recycling and circular economy app encouraging waste reduction across the Emirate.</p></li></ul></section><section><h2>From Sensor Telemetry to Conservation Policy.</h2><p>Continuous round-the-clock monitoring, automated AI anomaly detection, and actionable Emirate-wide environmental reporting.</p><ol><li><h3>Live Sensor Ingestion</h3><p>Over 20 advanced monitoring stations, satellite feeds, and marine buoys capturing environmental parameters in real time.</p></li><li><h3>Intelligent Modelling</h3><p>Machine learning models for atmospheric dispersion, biodiversity tracking, and automated air quality compliance.</p></li><li><h3>Actionable Policy</h3><p>Strategic dashboards empowering government agencies, industrial operators, and citizens to take proactive conservation steps.</p></li></ol><p>Precision data empowers conservation.</p></section><section><h2>Integrated Ecosystem. Powered by Modern Tech.</h2><p>Real-time telemetry, predictive AI models, and intuitive interfaces built to the highest global standards.</p><ul><li>Interface — Portals & Applications</li><li>Logic — Data & Compliance Engine</li><li>Model — Environmental AI & Models</li></ul><ul><li>Air Quality Telemetry — 20+ real-time monitoring stations streaming AQI, particulate matter, and meteorological indicators.</li><li>AI Avatars & Advisory — Bilingual lifelike avatars Souheil & Dana and AI chatbot providing instant verified environmental guidance.</li><li>Geospatial Enviroportal — Interactive GIS mapping platform to analyze biodiversity, marine zones, and environmental layers.</li><li>Abu Dhabi Nature — Citizen-science platform connecting the public to UAE native wildlife, birds, and marine creatures.</li><li>Naha Sustainability — Community initiative incentivizing recycling, circular economy practices, and plastic reduction.</li><li>Compliance & Licensing — Smart permitting, real-time industrial emission audits, and regulatory compliance tracking.</li></ul></section><section><h2>Abu Dhabi EDP, Partnering for Sustainability.</h2><p>Whether you are a researcher, environmental developer, or government representative, we are here to support your data needs and scientific collaborations.</p></section></main></div></div>
-    <div class="shell" aria-hidden="true"><div class="scene__layer hero"><div class="hero__inner container"><div class="hero__heading"><span class="hero__slogan intro-in">We build interactive experiences with AI</span><span class="hero__title" lang="en"><div class="emerge-line shell__line"><div class="shell__word"><div class="shell__char shell__c0">E</div><div class="shell__char shell__c1">x</div><div class="shell__char shell__c2">p</div><div class="shell__char shell__c3">e</div><div class="shell__char shell__c4">r</div><div class="shell__char shell__c5">i</div><div class="shell__char shell__c6">e</div><div class="shell__char shell__c7">n</div><div class="shell__char shell__c8">c</div><div class="shell__char shell__c9">e</div><div class="shell__char shell__c10">s</div><div class="shell__char shell__c11">,</div></div></div> <div class="emerge-line shell__line"><div class="shell__word"><div class="shell__char shell__c12">e</div><div class="shell__char shell__c13">n</div><div class="shell__char shell__c14">g</div><div class="shell__char shell__c15">i</div><div class="shell__char shell__c16">n</div><div class="shell__char shell__c17">e</div><div class="shell__char shell__c18">e</div><div class="shell__char shell__c19">r</div><div class="shell__char shell__c20">e</div><div class="shell__char shell__c21">d</div><div class="shell__char shell__c22">.</div></div></div></span></div><div class="hero__side"><p class="intro-in shell__lede">Interactive environmental intelligence and AI platforms for Abu Dhabi. Real-time data, spatial analysis and ecological conservation across the Emirate.</p><div class="hero__actions intro-in shell__actions"><span class="btn btn--primary"><span class="btn__label">Explore Platforms</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span><span class="btn btn--ghost"><span class="btn__label">Start a project</span></span></div></div></div></div></div>
+    <div id="root"><div class="prerender"><header><a href="/"><img src="/edplogo.svg" alt="Environment Agency – Abu Dhabi" style="height:42px;width:auto" /></a><nav><a href="#about">About EDP</a> <a href="#work">Applications</a> <a href="#process">Data Lifecycle</a> <a href="#studio">Catalogues</a> <a href="#contact">Contact EAD</a></nav></header><main><section><h1>Your Gateway to Environmental Insights. Unlock Environmental Insights for a Sustainable Future.</h1><p>Interactive environmental intelligence and AI platforms for Abu Dhabi. Real-time data, spatial analysis and ecological conservation across the Emirate.</p></section><section><h2>Environmental Intelligence for Abu Dhabi.</h2><p>The Environmental Data Portal (EDP) by the Environment Agency – Abu Dhabi (EAD) unifies comprehensive environmental intelligence across air quality, marine habitats, soil conservation, and biodiversity.</p><p>Data without action is invisible. Real-time environmental intelligence drives sustainable governance.</p><ul><li><h3>Environmental Portals</h3><p>Real-time monitoring networks for air quality, groundwater, marine ecosystems, and protected nature reserves across Abu Dhabi.</p><p>Air Quality · Enviroportal · Groundwater</p></li><li><h3>AI Conservation Services</h3><p>Interactive lifelike AI avatars (Souheil & Dana), environmental chatbot advisory, and predictive ecological models powered by machine learning.</p><p>EAD Avatar · Chatbot · AI Insights</p></li><li><h3>Biodiversity Catalogues</h3><p>Comprehensive digital registries of terrestrial and marine species, spatial habitat distribution maps, and environmental compliance indices.</p><p>Abu Dhabi Nature · Naha · Biodiversity</p></li></ul></section><section><h2>24+ Specialized Environmental Platforms Powering Abu Dhabi’s Ecological Leadership</h2><p>What is the EDP?: The Environmental Data Portal (EDP) is Abu Dhabi’s official environmental data gateway, providing open scientific datasets, real-time indicators, and APIs for researchers, decision-makers, and the public.</p><ul><li>Governed by: EAD · Abu Dhabi</li><li>Coverage: Terrestrial & Marine</li><li>Platforms: 24+ Live Systems</li></ul><ul><li><h3><a href="https://avatar.ead.ae/">EAD Avatar AI</a></h3><p>Environment Agency – Abu Dhabi</p><p>Interactive bilingual AI ambassadors Souheil & Dana delivering verified environmental education.</p></li><li><h3><a href="https://envirobot.ead.ae/">Environmental Chatbot</a></h3><p>Environment Agency – Abu Dhabi</p><p>Instant conversational AI advisory for environmental regulations, licensing, and conservation guidance.</p></li><li><h3><a href="https://enviroportal.ead.ae/">Enviroportal Spatial Map</a></h3><p>Environment Agency – Abu Dhabi</p><p>Comprehensive GIS explorer mapping terrestrial ecosystems, marine zones, and environmental telemetry.</p></li><li><h3><a href="https://airquality.ead.ae/">Air Quality Portal</a></h3><p>Environment Agency – Abu Dhabi</p><p>Emirate-wide real-time air quality index monitoring across 20+ specialized stations streaming PM2.5, ozone, and meteorological parameters.</p></li><li><h3><a href="https://adnature.ead.ae/">Abu Dhabi Nature</a></h3><p>Environment Agency – Abu Dhabi</p><p>Citizen-science wildlife discovery app reporting UAE native fauna and flora observations.</p></li><li><h3><a href="https://naha.ead.ae/">Naha Sustainability</a></h3><p>Environment Agency – Abu Dhabi</p><p>Incentivized recycling and circular economy app encouraging waste reduction across the Emirate.</p></li></ul></section><section><h2>From Sensor Telemetry to Conservation Policy.</h2><p>Continuous round-the-clock monitoring, automated AI anomaly detection, and actionable Emirate-wide environmental reporting.</p><ol><li><h3>Live Sensor Ingestion</h3><p>Over 20 advanced monitoring stations, satellite feeds, and marine buoys capturing environmental parameters in real time.</p></li><li><h3>Intelligent Modelling</h3><p>Machine learning models for atmospheric dispersion, biodiversity tracking, and automated air quality compliance.</p></li><li><h3>Actionable Policy</h3><p>Strategic dashboards empowering government agencies, industrial operators, and citizens to take proactive conservation steps.</p></li></ol><p>Precision data empowers conservation.</p></section><section><h2>Integrated Ecosystem. Powered by Modern Tech.</h2><p>Real-time telemetry, predictive AI models, and intuitive interfaces built to the highest global standards.</p><ul><li>Interface — Portals & Applications</li><li>Logic — Data & Compliance Engine</li><li>Model — Environmental AI & Models</li></ul><ul><li>Air Quality Telemetry — 20+ real-time monitoring stations streaming AQI, particulate matter, and meteorological indicators.</li><li>AI Avatars & Advisory — Bilingual lifelike avatars Souheil & Dana and AI chatbot providing instant verified environmental guidance.</li><li>Geospatial Enviroportal — Interactive GIS mapping platform to analyze biodiversity, marine zones, and environmental layers.</li><li>Abu Dhabi Nature — Citizen-science platform connecting the public to UAE native wildlife, birds, and marine creatures.</li><li>Naha Sustainability — Community initiative incentivizing recycling, circular economy practices, and plastic reduction.</li><li>Compliance & Licensing — Smart permitting, real-time industrial emission audits, and regulatory compliance tracking.</li></ul></section><section><h2>Abu Dhabi EDP, Partnering for Sustainability.</h2><p>Whether you are a researcher, environmental developer, or government representative, we are here to support your data needs and scientific collaborations.</p></section></main></div></div>
+    <div class="shell" aria-hidden="true"><div class="scene__layer hero"><div class="hero__inner container"><div class="hero__heading"><span class="hero__slogan intro-in">Your Gateway to Environmental Insights</span><span class="hero__title" lang="en">Unlock Environmental Insights,<br/>for a Sustainable Future.</span></div><div class="hero__side"><p class="intro-in shell__lede">Interactive environmental intelligence and AI platforms for Abu Dhabi. Real-time data, spatial analysis and ecological conservation across the Emirate.</p><div class="hero__actions intro-in shell__actions"><span class="btn btn--primary"><span class="btn__label">Explore Platforms</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span><span class="btn btn--ghost"><span class="btn__label">Start a project</span></span></div></div></div></div></div>
   </body>
 </html>
 
