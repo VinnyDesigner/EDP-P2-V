@@ -6,11 +6,11 @@
     <title>Abu Dhabi EDP — Environmental Data Portal | EAD</title>
     <meta name="description" content="Abu Dhabi Environmental Data Portal (EDP) by the Environment Agency – Abu Dhabi (EAD). Explore real-time air quality, marine habitats, soil conservation, and 24+ AI environmental platforms." />
     <meta name="theme-color" content="#000000" />
-    <script type="module" crossorigin src="/assets/navigation-DiPJwl4U.js?v=edp-v17"></script>
-    <script type="module" crossorigin src="/assets/ContactDialog-DOlj7i4z.js?v=edp-v17"></script>
-    <script type="module" crossorigin src="/assets/main-7Jk9ujX-.js?v=edp-v17"></script>
-    <link rel="stylesheet" crossorigin href="/assets/navigation-BQ5-cxHW.css?v=edp-v17">
-    <link rel="stylesheet" crossorigin href="/assets/ContactDialog-BPD9mSvP.css?v=edp-v17">
+    <script type="module" crossorigin src="/assets/navigation-DiPJwl4U.js?v=edp-v18"></script>
+    <script type="module" crossorigin src="/assets/ContactDialog-DOlj7i4z.js?v=edp-v18"></script>
+    <script type="module" crossorigin src="/assets/main-7Jk9ujX-.js?v=edp-v18"></script>
+    <link rel="stylesheet" crossorigin href="/assets/navigation-BQ5-cxHW.css?v=edp-v18">
+    <link rel="stylesheet" crossorigin href="/assets/ContactDialog-BPD9mSvP.css?v=edp-v18">
     <link rel="stylesheet" crossorigin href="/assets/main-DAiTGXDI.css">
         <style>
       :root {
@@ -1005,310 +1005,265 @@ window.addEventListener('click', function(e) {
 </script>
 
 
-<!-- EDP APPLICATIONS & CATALOGUES FULL-PAGE PANEL -->
-<div id="edp-catalog-modal" class="edp-modal" style="display: none;" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="edp-modal-title">
-  <div class="edp-modal__backdrop" onclick="window.closeEdpPanel()"></div>
-  <div class="edp-modal__sheet">
-    <!-- Top Header Bar -->
-    <header class="edp-modal__header">
-      <div class="edp-modal__brand">
-        <img src="/edplogo.svg" alt="EAD Logo" class="edp-modal__logo" />
-        <div>
-          <h2 id="edp-modal-title" class="edp-modal__title">Environmental Applications &amp; Catalogues</h2>
-          <p class="edp-modal__subtitle">Authoritative data platforms, geospatial GIS portals, AI advisory, and biodiversity registries for Abu Dhabi</p>
+
+<!-- EDP APPLICATIONS & CATALOGUES DIALOG USING CONTACT EAD PANEL ARCHITECTURE & EFFECT -->
+<dialog id="edp-catalog-modal" class="contact-dialog is-closed" aria-labelledby="edp-catalog-title" data-lenis-prevent="">
+  <!-- Dark ambient backdrop with space layer -->
+  <div class="contact-dialog__space edp-space-backdrop" onclick="window.closeEdpPanel()" aria-hidden="true"></div>
+
+  <!-- Close button with exact Contact EAD styling -->
+  <button type="button" class="contact-dialog__close mono" onclick="window.closeEdpPanel()" aria-label="Close dialog">
+    <span class="menu-button__close mono" aria-hidden="true">
+      <span class="menu-button__cross">&times;</span> ESC
+    </span>
+  </button>
+
+  <!-- Panel with Contact Dialog scroll mask -->
+  <div class="contact-dialog__panel edp-contact-style-panel" data-lenis-prevent="">
+    <div class="edp-panel-inner">
+      <!-- Header Section -->
+      <div class="edp-panel-header">
+        <div class="edp-panel-brand">
+          <img src="/edplogo.svg" alt="EAD Logo" class="edp-panel-logo" />
+          <div>
+            <div class="mono edp-panel-kicker">ENVIRONMENT AGENCY &ndash; ABU DHABI &middot; EAD</div>
+            <h2 id="edp-catalog-title" class="edp-panel-title">Environmental Applications &amp; Catalogues</h2>
+            <p class="edp-panel-desc">24 Specialized Environmental Platforms &amp; 8 Biodiversity Catalogues Powering Abu Dhabi's Ecological Leadership</p>
+          </div>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="edp-panel-controls">
+          <div class="edp-panel-tabs mono" role="tablist">
+            <button type="button" class="edp-catalog-tab is-active" data-tab="all" onclick="window.setEdpTab('all')">
+              <span>All Solutions</span>
+              <span class="edp-tab-pill">32</span>
+            </button>
+            <button type="button" class="edp-catalog-tab" data-tab="applications" onclick="window.setEdpTab('applications')">
+              <span>Applications</span>
+              <span class="edp-tab-pill">24</span>
+            </button>
+            <button type="button" class="edp-catalog-tab" data-tab="catalogues" onclick="window.setEdpTab('catalogues')">
+              <span>Catalogues</span>
+              <span class="edp-tab-pill">8</span>
+            </button>
+          </div>
+
+          <div class="edp-panel-search">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="edp-catalog-search-input" placeholder="Search portals, air quality, species..." oninput="window.filterEdpCards()" />
+          </div>
         </div>
       </div>
 
-      <div class="edp-modal__controls">
-        <div class="edp-modal__tabs" role="tablist">
-          <button type="button" class="edp-tab-btn is-active" data-tab="all" onclick="window.setEdpTab('all')">
-            <span>All Solutions</span>
-            <span class="edp-tab-count">32</span>
-          </button>
-          <button type="button" class="edp-tab-btn" data-tab="applications" onclick="window.setEdpTab('applications')">
-            <span>Applications</span>
-            <span class="edp-tab-count">24</span>
-          </button>
-          <button type="button" class="edp-tab-btn" data-tab="catalogues" onclick="window.setEdpTab('catalogues')">
-            <span>Catalogues</span>
-            <span class="edp-tab-count">8</span>
-          </button>
-        </div>
-
-        <div class="edp-modal__search">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-          <input type="text" id="edp-catalog-search" placeholder="Search portals, air quality, species..." oninput="window.filterEdpCards()" />
-        </div>
-
-        <button type="button" class="edp-modal__close-btn" onclick="window.closeEdpPanel()" aria-label="Close dialog">
-          <span>✕ Close</span>
-          <kbd>ESC</kbd>
-        </button>
-      </div>
-    </header>
-
-    <!-- Grid Container -->
-    <main class="edp-modal__body">
-      <div id="edp-cards-grid" class="edp-grid"></div>
-    </main>
+      <!-- Card Grid -->
+      <div id="edp-cards-grid" class="edp-catalog-grid"></div>
+    </div>
   </div>
-</div>
+</dialog>
 
 <style>
-/* EDP Full Page Modal Styles */
-.edp-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 999999;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  font-family: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+/* Contact EAD Effect & Panel Styling for Applications / Catalogues */
+.contact-dialog.is-open {
+  display: block;
 }
-.edp-modal.is-open {
-  opacity: 1;
-  pointer-events: auto;
+.contact-dialog.is-closed {
+  display: none;
 }
-.edp-modal__backdrop {
+.edp-space-backdrop {
   position: absolute;
   inset: 0;
-  background: rgba(1, 10, 8, 0.92);
-  backdrop-filter: blur(24px);
-  -webkit-backdrop-filter: blur(24px);
+  background: radial-gradient(130% 100% at 50% 0%, rgba(3, 26, 21, 0.94) 0%, rgba(1, 10, 8, 0.97) 100%);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  z-index: 1;
 }
-.edp-modal__sheet {
+
+.edp-contact-style-panel {
   position: relative;
   z-index: 2;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background: radial-gradient(130% 100% at 50% 0%, rgba(4, 32, 26, 0.98) 0%, rgba(1, 10, 8, 0.99) 100%);
-  color: #ffffff;
-  overflow: hidden;
+  overflow-y: auto;
   box-sizing: border-box;
 }
 
-/* Header */
-.edp-modal__header {
-  flex-shrink: 0;
+.edp-panel-inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 10px 20px 80px;
+}
+
+.edp-panel-header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  padding: 20px 48px;
-  background: rgba(3, 22, 18, 0.85);
+  gap: 24px;
+  padding-bottom: 28px;
   border-bottom: 1px solid rgba(197, 160, 89, 0.28);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  margin-bottom: 36px;
 }
-.edp-modal__brand {
+
+.edp-panel-brand {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
 }
-.edp-modal__logo {
-  height: 48px;
+.edp-panel-logo {
+  height: 54px;
   width: auto;
-  filter: drop-shadow(0 2px 8px rgba(16, 185, 129, 0.3));
+  filter: drop-shadow(0 2px 12px rgba(16, 185, 129, 0.35));
 }
-.edp-modal__title {
+.edp-panel-kicker {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: #c5a059;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.edp-panel-title {
   margin: 0;
-  font-size: 20px;
+  font-size: clamp(24px, 3vw, 36px);
   font-weight: 700;
-  letter-spacing: -0.01em;
-  background: linear-gradient(135deg, #ffffff 0%, #d1fae5 50%, #c5a059 100%);
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  background: linear-gradient(135deg, #ffffff 0%, #d1fae5 45%, #c5a059 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.edp-modal__subtitle {
-  margin: 3px 0 0 0;
-  font-size: 13px;
-  color: rgba(209, 250, 229, 0.7);
+.edp-panel-desc {
+  margin: 6px 0 0 0;
+  font-size: 14px;
+  color: rgba(209, 250, 229, 0.75);
+  max-width: 600px;
 }
 
-.edp-modal__controls {
+.edp-panel-controls {
   display: flex;
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
 }
 
-/* Filter Tabs */
-.edp-modal__tabs {
+.edp-panel-tabs {
   display: inline-flex;
   align-items: center;
-  background: rgba(2, 16, 13, 0.8);
-  border: 1px solid rgba(197, 160, 89, 0.3);
+  background: rgba(3, 22, 18, 0.85);
+  border: 1px solid rgba(197, 160, 89, 0.35);
   border-radius: 9999px;
   padding: 4px;
   gap: 4px;
 }
-.edp-tab-btn {
+.edp-catalog-tab {
   background: transparent;
   border: none;
   color: rgba(209, 250, 229, 0.75);
   font-family: inherit;
   font-size: 13px;
   font-weight: 600;
-  padding: 6px 14px;
+  padding: 7px 16px;
   border-radius: 9999px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  transition: all 0.2s ease;
+  gap: 8px;
+  transition: all 0.22s ease;
 }
-.edp-tab-btn:hover {
+.edp-catalog-tab:hover {
   color: #ffffff;
-  background: rgba(16, 185, 129, 0.15);
+  background: rgba(16, 185, 129, 0.16);
 }
-.edp-tab-btn.is-active {
+.edp-catalog-tab.is-active {
   background: linear-gradient(135deg, #10b981 0%, #005844 100%);
   color: #ffffff;
   box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4);
 }
-.edp-tab-count {
+.edp-tab-pill {
   font-size: 11px;
-  padding: 2px 6px;
+  padding: 2px 7px;
   border-radius: 9999px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.35);
   color: #d1fae5;
 }
 
-/* Search Box */
-.edp-modal__search {
+.edp-panel-search {
   position: relative;
   display: inline-flex;
   align-items: center;
 }
-.edp-modal__search svg {
+.edp-panel-search svg {
   position: absolute;
-  left: 12px;
+  left: 14px;
   color: rgba(197, 160, 89, 0.8);
   pointer-events: none;
 }
-.edp-modal__search input {
-  background: rgba(2, 16, 13, 0.8);
-  border: 1px solid rgba(197, 160, 89, 0.3);
+.edp-panel-search input {
+  background: rgba(3, 22, 18, 0.85);
+  border: 1px solid rgba(197, 160, 89, 0.35);
   border-radius: 9999px;
-  padding: 8px 16px 8px 36px;
+  padding: 9px 18px 9px 38px;
   color: #ffffff;
   font-family: inherit;
-  font-size: 13px;
-  width: 260px;
+  font-size: 13.5px;
+  width: 270px;
   outline: none;
   transition: all 0.2s ease;
 }
-.edp-modal__search input:focus {
+.edp-panel-search input:focus {
   border-color: #10b981;
-  box-shadow: 0 0 12px rgba(16, 185, 129, 0.35);
-  width: 300px;
+  box-shadow: 0 0 14px rgba(16, 185, 129, 0.4);
+  width: 310px;
 }
-.edp-modal__search input::placeholder {
+.edp-panel-search input::placeholder {
   color: rgba(209, 250, 229, 0.45);
 }
 
-/* Close Button */
-.edp-modal__close-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  background: rgba(3, 24, 20, 0.8);
-  border: 1px solid rgba(197, 160, 89, 0.4);
-  color: #ffffff;
-  padding: 8px 16px;
-  border-radius: 9999px;
-  font-family: inherit;
-  font-size: 13px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-.edp-modal__close-btn:hover {
-  background: rgba(16, 185, 129, 0.25);
-  border-color: #10b981;
-  box-shadow: 0 0 14px rgba(16, 185, 129, 0.3);
-}
-.edp-modal__close-btn kbd {
-  font-size: 10px;
-  padding: 2px 5px;
-  border-radius: 4px;
-  background: rgba(255, 255, 255, 0.12);
-  color: #d1fae5;
-}
-
-/* Body / Grid */
-.edp-modal__body {
-  flex: 1;
-  overflow-y: auto;
-  padding: 36px 48px 80px;
-  box-sizing: border-box;
-}
-.edp-modal__body::-webkit-scrollbar {
-  width: 8px;
-}
-.edp-modal__body::-webkit-scrollbar-track {
-  background: rgba(1, 10, 8, 0.5);
-}
-.edp-modal__body::-webkit-scrollbar-thumb {
-  background: rgba(16, 185, 129, 0.3);
-  border-radius: 4px;
-}
-.edp-modal__body::-webkit-scrollbar-thumb:hover {
-  background: rgba(16, 185, 129, 0.6);
-}
-
-.edp-grid {
+/* Grid & Cards */
+.edp-catalog-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 28px;
   width: 100%;
 }
 
-/* Card Styling */
-.edp-card {
+.edp-catalog-card {
   display: flex;
   flex-direction: column;
-  background: rgba(6, 28, 23, 0.78);
-  border: 1px solid rgba(197, 160, 89, 0.26);
+  background: rgba(4, 26, 21, 0.82);
+  border: 1px solid rgba(197, 160, 89, 0.28);
   border-radius: 20px;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.28s ease, box-shadow 0.28s ease;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
 }
-.edp-card:hover {
+.edp-catalog-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(16, 185, 129, 0.65);
-  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.55), 0 0 24px rgba(16, 185, 129, 0.22);
+  border-color: rgba(16, 185, 129, 0.7);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 26px rgba(16, 185, 129, 0.25);
 }
 
-.edp-card__cover {
+.edp-catalog-card__cover {
   position: relative;
   width: 100%;
   height: 195px;
   overflow: hidden;
   background: #020b09;
 }
-.edp-card__img {
+.edp-catalog-card__img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.4s ease;
 }
-.edp-card:hover .edp-card__img {
+.edp-catalog-card:hover .edp-catalog-card__img {
   transform: scale(1.04);
 }
-.edp-card__badge-row {
+.edp-catalog-card__badges {
   position: absolute;
   top: 12px;
   left: 14px;
@@ -1318,7 +1273,7 @@ window.addEventListener('click', function(e) {
   align-items: center;
   z-index: 2;
 }
-.edp-card__badge {
+.edp-card-tag {
   font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
@@ -1327,54 +1282,54 @@ window.addEventListener('click', function(e) {
   border-radius: 9999px;
   backdrop-filter: blur(8px);
 }
-.edp-card__badge--platform {
-  background: rgba(16, 185, 129, 0.88);
+.edp-card-tag--platform {
+  background: rgba(16, 185, 129, 0.9);
   color: #ffffff;
   box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
 }
-.edp-card__badge--ai {
-  background: rgba(197, 160, 89, 0.92);
+.edp-card-tag--ai {
+  background: rgba(197, 160, 89, 0.94);
   color: #020b09;
   box-shadow: 0 2px 8px rgba(197, 160, 89, 0.35);
 }
-.edp-card__badge--catalogue {
-  background: rgba(6, 182, 212, 0.88);
+.edp-card-tag--catalogue {
+  background: rgba(6, 182, 212, 0.9);
   color: #ffffff;
   box-shadow: 0 2px 8px rgba(6, 182, 212, 0.3);
 }
 
-.edp-card__idx {
+.edp-card-idx {
   font-size: 11px;
   font-weight: 700;
   color: #ffffff;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.65);
   border: 1px solid rgba(255, 255, 255, 0.15);
   padding: 3px 8px;
   border-radius: 9999px;
   backdrop-filter: blur(6px);
 }
 
-.edp-card__content {
+.edp-catalog-card__body {
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: 20px 22px;
+  padding: 22px;
 }
-.edp-card__names {
+.edp-catalog-card__names {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   gap: 10px;
   margin-bottom: 8px;
 }
-.edp-card__name {
+.edp-catalog-card__name {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
   color: #ffffff;
   line-height: 1.3;
 }
-.edp-card__name-ar {
+.edp-catalog-card__name-ar {
   margin: 0;
   font-size: 15px;
   font-weight: 600;
@@ -1382,23 +1337,23 @@ window.addEventListener('click', function(e) {
   direction: rtl;
   white-space: nowrap;
 }
-.edp-card__desc {
-  margin: 0 0 18px 0;
+.edp-catalog-card__desc {
+  margin: 0 0 20px 0;
   font-size: 13.5px;
   line-height: 1.55;
   color: rgba(209, 250, 229, 0.8);
   flex: 1;
 }
 
-.edp-card__footer {
+.edp-catalog-card__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-top: 1px solid rgba(197, 160, 89, 0.18);
+  border-top: 1px solid rgba(197, 160, 89, 0.2);
   padding-top: 14px;
   margin-top: auto;
 }
-.edp-card__launch-btn {
+.edp-card-launch-btn {
   display: inline-flex;
   align-items: center;
   gap: 6px;
@@ -1412,26 +1367,24 @@ window.addEventListener('click', function(e) {
   transition: all 0.2s ease;
   box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
 }
-.edp-card__launch-btn:hover {
+.edp-card-launch-btn:hover {
   box-shadow: 0 4px 14px rgba(16, 185, 129, 0.5);
   transform: translateY(-1px);
 }
-.edp-card__tag {
+.edp-card-gov {
   font-size: 11px;
   color: #c5a059;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
   font-weight: 600;
 }
 
 @media (max-width: 768px) {
-  .edp-modal__header {
-    padding: 16px 20px;
+  .edp-panel-header {
+    padding-bottom: 20px;
+    margin-bottom: 24px;
   }
-  .edp-modal__body {
-    padding: 20px 20px 60px;
-  }
-  .edp-grid {
+  .edp-catalog-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
@@ -1449,21 +1402,24 @@ window.addEventListener('click', function(e) {
     activeTab = tab || 'all';
     const modal = document.getElementById('edp-catalog-modal');
     if (!modal) return;
-    modal.style.display = 'flex';
-    requestAnimationFrame(() => modal.classList.add('is-open'));
+
+    // Contact EAD Effect: Add is-contact-open to documentElement to fade main page
+    document.documentElement.classList.add('is-contact-open');
+    try { modal.showModal(); } catch(e) {}
+    modal.classList.remove('is-closed');
+    modal.classList.add('is-open', 'is-shown', 'is-live');
     document.body.style.overflow = 'hidden';
 
     // Update active tab buttons
-    document.querySelectorAll('.edp-tab-btn').forEach(btn => {
+    document.querySelectorAll('.edp-catalog-tab').forEach(btn => {
       btn.classList.toggle('is-active', btn.dataset.tab === activeTab);
     });
 
-    // Clear search
-    const searchInput = document.getElementById('edp-catalog-search');
+    // Reset search
+    const searchInput = document.getElementById('edp-catalog-search-input');
     if (searchInput) {
       searchInput.value = '';
       searchQuery = '';
-      searchInput.focus();
     }
 
     renderEdpCards();
@@ -1472,23 +1428,29 @@ window.addEventListener('click', function(e) {
   window.closeEdpPanel = function() {
     const modal = document.getElementById('edp-catalog-modal');
     if (!modal) return;
-    modal.classList.remove('is-open');
+
+    modal.classList.remove('is-shown');
+    // Remove is-contact-open to smoothly fade main page back in
+    document.documentElement.classList.remove('is-contact-open');
+
     setTimeout(() => {
-      modal.style.display = 'none';
+      modal.classList.remove('is-open', 'is-live');
+      modal.classList.add('is-closed');
       document.body.style.overflow = '';
-    }, 280);
+      try { modal.close(); } catch(e) {}
+    }, 350);
   };
 
   window.setEdpTab = function(tab) {
     activeTab = tab;
-    document.querySelectorAll('.edp-tab-btn').forEach(btn => {
+    document.querySelectorAll('.edp-catalog-tab').forEach(btn => {
       btn.classList.toggle('is-active', btn.dataset.tab === activeTab);
     });
     renderEdpCards();
   };
 
   window.filterEdpCards = function() {
-    const searchInput = document.getElementById('edp-catalog-search');
+    const searchInput = document.getElementById('edp-catalog-search-input');
     searchQuery = (searchInput ? searchInput.value : '').toLowerCase().trim();
     renderEdpCards();
   };
@@ -1498,11 +1460,9 @@ window.addEventListener('click', function(e) {
     if (!grid) return;
 
     const filtered = EDP_APPS.filter(app => {
-      // Tab filter
       if (activeTab === 'applications' && app.tab !== 'applications') return false;
       if (activeTab === 'catalogues' && app.tab !== 'catalogues') return false;
 
-      // Search filter
       if (searchQuery) {
         const text = (app.name + ' ' + (app.nameAr || '') + ' ' + (app.desc || '') + ' ' + (app.group || '')).toLowerCase();
         if (!text.includes(searchQuery)) return false;
@@ -1523,28 +1483,28 @@ window.addEventListener('click', function(e) {
     grid.innerHTML = filtered.map((app, idx) => {
       const isAI = app.group === 'ai';
       const isCat = app.tab === 'catalogues';
-      const badgeClass = isAI ? 'edp-card__badge--ai' : (isCat ? 'edp-card__badge--catalogue' : 'edp-card__badge--platform');
+      const badgeClass = isAI ? 'edp-card-tag--ai' : (isCat ? 'edp-card-tag--catalogue' : 'edp-card-tag--platform');
       const badgeLabel = isAI ? '✦ CONSERVATION AI' : (isCat ? '◈ CATALOGUE' : '● PLATFORM');
       const fallbackImg = app.remoteImage || '/edp-thumbs/img-97.jpg';
 
       return `
-        <article class="edp-card">
-          <div class="edp-card__cover">
-            <img src="${app.image}" onerror="this.onerror=null;this.src='${fallbackImg}';" alt="${app.name}" class="edp-card__img" loading="lazy" />
-            <div class="edp-card__badge-row">
-              <span class="edp-card__badge ${badgeClass}">${badgeLabel}</span>
-              <span class="edp-card__idx">#${String(idx + 1).padStart(2, '0')}</span>
+        <article class="edp-catalog-card">
+          <div class="edp-catalog-card__cover">
+            <img src="${app.image}" onerror="this.onerror=null;this.src='${fallbackImg}';" alt="${app.name}" class="edp-catalog-card__img" loading="lazy" />
+            <div class="edp-catalog-card__badges">
+              <span class="edp-card-tag ${badgeClass}">${badgeLabel}</span>
+              <span class="edp-card-idx">#${String(idx + 1).padStart(2, '0')}</span>
             </div>
           </div>
-          <div class="edp-card__content">
-            <div class="edp-card__names">
-              <h3 class="edp-card__name">${app.name}</h3>
-              <span class="edp-card__name-ar">${app.nameAr || ''}</span>
+          <div class="edp-catalog-card__body">
+            <div class="edp-catalog-card__names">
+              <h3 class="edp-catalog-card__name">${app.name}</h3>
+              <span class="edp-catalog-card__name-ar">${app.nameAr || ''}</span>
             </div>
-            <p class="edp-card__desc">${app.desc}</p>
-            <div class="edp-card__footer">
-              <span class="edp-card__tag">EAD · Abu Dhabi</span>
-              <a href="${app.url}" target="_blank" rel="noopener" class="edp-card__launch-btn">
+            <p class="edp-catalog-card__desc">${app.desc}</p>
+            <div class="edp-catalog-card__footer">
+              <span class="edp-card-gov">EAD &middot; Abu Dhabi</span>
+              <a href="${app.url}" target="_blank" rel="noopener" class="edp-card-launch-btn">
                 <span>Launch Portal</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -1566,12 +1526,14 @@ window.addEventListener('click', function(e) {
     }
   });
 
-  // Global trigger listener
-  window.addEventListener('message', function(ev) {
-    if (ev.data && ev.data.type === 'OPEN_EDP_PANEL') {
-      window.openEdpPanel(ev.data.tab || 'all');
-    }
-  });
+  // Native dialog cancel event
+  const modalEl = document.getElementById('edp-catalog-modal');
+  if (modalEl) {
+    modalEl.addEventListener('cancel', function(e) {
+      e.preventDefault();
+      window.closeEdpPanel();
+    });
+  }
 })();
 </script>
 

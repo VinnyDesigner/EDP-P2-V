@@ -94,3 +94,4 @@ let home5 = fs.readFileSync('src/routes/home5.tsx', 'utf8');
 home5 = home5.replace(/v=edp-v\d+/g, 'v=edp-v17');
 fs.writeFileSync('src/routes/home5.tsx', home5);
 console.log('Saved src/routes/home5.tsx with v=edp-v17');
+
