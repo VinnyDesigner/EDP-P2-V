@@ -3,19 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-    <title>PUTURE — Interactive AI experiences for brands, pop-ups and campaigns</title>
-    <meta
-      name="description"
-      content="PUTURE is an interactive tech studio that builds experiences with AI. We plan and build them for brands, pop-up stores, AI campaigns and exhibitions, including the three programs inside KT AI Station, named a Champion of the WSIS Prize 2026."
-    />
+    <title>Abu Dhabi EDP — Environmental Data Portal | EAD</title>
+    <meta name="description" content="Abu Dhabi Environmental Data Portal (EDP) by the Environment Agency – Abu Dhabi (EAD). Explore real-time air quality, marine habitats, soil conservation, and 24+ AI environmental platforms." />
     <meta name="theme-color" content="#000000" />
-    <script type="module" crossorigin src="/assets/navigation-DiPJwl4U.js"></script>
-    <script type="module" crossorigin src="/assets/ContactDialog-DOlj7i4z.js"></script>
-    <script type="module" crossorigin src="/assets/main-7Jk9ujX-.js"></script>
+    <script type="module" crossorigin src="/assets/navigation-DiPJwl4U.js?v=edp-v5"></script>
+    <script type="module" crossorigin src="/assets/ContactDialog-DOlj7i4z.js?v=edp-v5"></script>
+    <script type="module" crossorigin src="/assets/main-7Jk9ujX-.js?v=edp-v5"></script>
     <link rel="stylesheet" crossorigin href="/assets/navigation-BQ5-cxHW.css">
     <link rel="stylesheet" crossorigin href="/assets/ContactDialog-BPD9mSvP.css">
     <link rel="stylesheet" crossorigin href="/assets/main-DAiTGXDI.css">
-    <style>
+        <style>
+      :root {
+        --blue: #10b981 !important;
+        --blue-fill: #059669 !important;
+        --blue-700: #047857 !important;
+        --blue-300: #34d399 !important;
+        --black: #041215 !important;
+        --edp-emerald: #10b981;
+        --edp-forest: #005844;
+        --edp-gold: #c5a059;
+        --edp-mint: #6ee7b7;
+      }
+
+      /* EDP Main Header Logo */
       .site-header .edp-main-logo {
         height: 42px;
         width: auto;
@@ -28,11 +38,315 @@
         padding: 4px 10px;
         border-radius: 8px;
       }
-    </style>
+
+      /* Navigation link refinement */
+      .menu-link[href="#studio"],
+      .chapter-dots__item[data-chapter="studio"] {
+        display: none !important;
+      }
+
+      /* Complete removal of unwanted 3-tier studio diagram section (Image 1) */
+      #studio,
+      [data-chapter="studio"],
+      .studio-scene,
+      .layer-stack {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+        height: 0 !important;
+        overflow: hidden !important;
+      }
+
+      /* Make icon tiles round coins matching EDP style & Image 2 */
+      .icon-tile {
+        border-radius: 9999px !important;
+      }
+      .icon-tile--blue {
+        background: linear-gradient(135deg, #10b981, #005844) !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 16px rgba(16, 185, 129, 0.35) !important;
+      }
+      .layer-stack__tile {
+        border-radius: 9999px !important;
+        background: linear-gradient(135deg, #10b981, #005844) !important;
+        box-shadow: 0 4px 16px rgba(16, 185, 129, 0.4) !important;
+      }
+
+      /* 3D Coin Hover Tooltip - EDP Emerald & Gold luxury pill (Image 2) */
+      .chip-label {
+        z-index: 999999 !important;
+        pointer-events: none !important;
+        will-change: transform, opacity !important;
+        display: flex !important;
+        align-items: center !important;
+        filter: drop-shadow(0 14px 32px rgba(0, 0, 0, 0.8)) drop-shadow(0 0 16px rgba(16, 185, 129, 0.45)) !important;
+      }
+      .chip-label .label {
+        display: inline-flex !important;
+        align-items: stretch !important;
+        border-radius: 999px !important;
+        overflow: hidden !important;
+        border: 1px solid rgba(197, 160, 89, 0.5) !important;
+        background: rgba(3, 22, 18, 0.96) !important;
+        backdrop-filter: blur(14px) !important;
+        -webkit-backdrop-filter: blur(14px) !important;
+        box-shadow: 0 8px 26px rgba(0, 0, 0, 0.6) !important;
+      }
+      .chip-label .label__index {
+        background: linear-gradient(135deg, #c5a059, #dfba73) !important;
+        color: #041215 !important;
+        font-weight: 800 !important;
+        font-size: 11px !important;
+        letter-spacing: 0.08em !important;
+        padding: 8px 12px !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+      .chip-label .label__text {
+        background: transparent !important;
+        color: #f0fdf4 !important;
+        font-weight: 600 !important;
+        font-size: 12px !important;
+        letter-spacing: 0.05em !important;
+        text-transform: uppercase !important;
+        padding: 8px 16px !important;
+        display: flex !important;
+        align-items: center !important;
+      }
+
+      /* Absolute eradication of all blue elements across the platform */
+      .chapter-dots__item.is-active .chapter-dots__mark {
+        background: #10b981 !important;
+        box-shadow: 0 0 12px rgba(16, 185, 129, 0.8) !important;
+      }
+      .label__index {
+        background: #059669 !important;
+        color: #ffffff !important;
+      }
+      .btn--primary {
+        background: linear-gradient(135deg, #059669, #10b981) !important;
+        color: #ffffff !important;
+        border: none !important;
+        box-shadow: 0 4px 18px rgba(16, 185, 129, 0.4) !important;
+      }
+      .btn--primary:hover {
+        background: linear-gradient(135deg, #047857, #059669) !important;
+        box-shadow: 0 6px 22px rgba(16, 185, 129, 0.6) !important;
+      }
+
+      /* Environmental Command-Center Differentiators (Beyond Hero Section) */
+      .feature-card {
+        background: linear-gradient(160deg, rgba(4, 25, 22, 0.9), rgba(5, 36, 28, 0.75)) !important;
+        border: 1px solid rgba(16, 185, 129, 0.28) !important;
+        border-radius: 20px !important;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+        transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease !important;
+      }
+      .feature-card:hover {
+        border-color: rgba(16, 185, 129, 0.55) !important;
+        transform: translateY(-4px) !important;
+        box-shadow: 0 20px 48px rgba(0, 0, 0, 0.6), 0 0 24px rgba(16, 185, 129, 0.25) !important;
+      }
+      .feature-card .tag {
+        background: rgba(16, 185, 129, 0.14) !important;
+        border: 1px solid rgba(16, 185, 129, 0.35) !important;
+        color: #6ee7b7 !important;
+        border-radius: 9999px !important;
+        font-size: 11px !important;
+      }
+
+      /* Step / Process Cards (Data Lifecycle) */
+      .step {
+        background: linear-gradient(160deg, rgba(3, 20, 18, 0.92), rgba(6, 32, 26, 0.8)) !important;
+        border: 1px solid rgba(16, 185, 129, 0.25) !important;
+        border-radius: 18px !important;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45) !important;
+      }
+      .step__index {
+        color: #c5a059 !important;
+        font-family: var(--font-mono, monospace) !important;
+        font-weight: 700 !important;
+      }
+
+      /* Exhibit Cards Section (Applications) */
+      .work-panel__tag {
+        background: linear-gradient(135deg, #059669, #10b981) !important;
+        color: #ffffff !important;
+        font-weight: 700 !important;
+        border-radius: 6px !important;
+      }
+      .work-panel__action {
+        color: #10b981 !important;
+        border-bottom: 2px solid rgba(16, 185, 129, 0.6) !important;
+      }
+      .work-panel__action:hover {
+        color: #6ee7b7 !important;
+        border-bottom-color: #6ee7b7 !important;
+      }
+
+      /* Hide extraneous badges and ribbons */
+      .awwwards-ribbon,
+      .nominee-badge {
+        display: none !important;
+      }
+    
+      /* EDP Ultra-Premium About Cards (Image 1 overhaul) */
+      .feature-card.edp-premium-card,
+      .feature-card {
+        background: linear-gradient(168deg, rgba(3, 24, 20, 0.96), rgba(4, 34, 28, 0.92)) !important;
+        border: 1px solid rgba(197, 160, 89, 0.35) !important;
+        border-radius: 20px !important;
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 28px rgba(16, 185, 129, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+        overflow: hidden !important;
+        display: flex !important;
+        flex-direction: column !important;
+        transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease, box-shadow 0.35s ease !important;
+      }
+
+      .feature-card.edp-premium-card:hover,
+      .feature-card:hover {
+        transform: translateY(-8px) scale(1.02) !important;
+        border-color: rgba(197, 160, 89, 0.7) !important;
+        box-shadow: 0 32px 70px rgba(0, 0, 0, 0.85), 0 0 40px rgba(16, 185, 129, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+      }
+
+      .edp-card-thumb,
+      .feature-card__visual {
+        position: relative !important;
+        height: 220px !important;
+        width: 100% !important;
+        overflow: hidden !important;
+        background: #021612 !important;
+        background-image: none !important;
+      }
+
+      .edp-thumb-img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        display: block !important;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1) !important;
+      }
+
+      .feature-card:hover .edp-thumb-img {
+        transform: scale(1.08) !important;
+      }
+
+      .edp-thumb-overlay {
+        position: absolute !important;
+        inset: 0 !important;
+        background: linear-gradient(180deg, rgba(2, 16, 14, 0.1) 0%, rgba(3, 24, 20, 0.85) 100%) !important;
+        pointer-events: none !important;
+      }
+
+      .edp-index-chip {
+        position: absolute !important;
+        top: 14px !important;
+        left: 14px !important;
+        background: linear-gradient(135deg, #c5a059, #dfba73) !important;
+        color: #041215 !important;
+        font-weight: 800 !important;
+        font-size: 12px !important;
+        padding: 5px 12px !important;
+        border-radius: 9999px !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5) !important;
+        z-index: 2 !important;
+      }
+
+      .edp-badge-pill {
+        position: absolute !important;
+        top: 14px !important;
+        right: 14px !important;
+        background: rgba(4, 30, 24, 0.85) !important;
+        border: 1px solid rgba(16, 185, 129, 0.6) !important;
+        color: #6ee7b7 !important;
+        font-weight: 700 !important;
+        font-size: 10px !important;
+        letter-spacing: 0.08em !important;
+        padding: 5px 12px !important;
+        border-radius: 9999px !important;
+        backdrop-filter: blur(8px) !important;
+        -webkit-backdrop-filter: blur(8px) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+        z-index: 2 !important;
+      }
+
+      .edp-card-words,
+      .feature-card__words {
+        padding: 24px 26px 16px !important;
+        flex: 1 !important;
+      }
+
+      .edp-card-words h3,
+      .feature-card__title {
+        font-size: 24px !important;
+        font-weight: 700 !important;
+        color: #ffffff !important;
+        margin-bottom: 10px !important;
+        line-height: 1.25 !important;
+      }
+
+      .edp-card-words p,
+      .feature-card__body {
+        font-size: 14px !important;
+        line-height: 1.65 !important;
+        color: #a7f3d0 !important;
+      }
+
+      .edp-card-tags,
+      .feature-card__tags {
+        padding: 0 26px 18px !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        list-style: none !important;
+        margin: 0 !important;
+      }
+
+      .edp-card-tags li,
+      .feature-card__tags li {
+        background: rgba(16, 185, 129, 0.12) !important;
+        border: 1px solid rgba(16, 185, 129, 0.3) !important;
+        color: #6ee7b7 !important;
+        font-size: 11px !important;
+        font-weight: 600 !important;
+        padding: 4px 12px !important;
+        border-radius: 9999px !important;
+        letter-spacing: 0.04em !important;
+      }
+
+      .edp-card-btn,
+      .feature-card__more {
+        margin: 0 26px 26px !important;
+        padding: 13px 20px !important;
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(197, 160, 89, 0.2)) !important;
+        border: 1px solid rgba(197, 160, 89, 0.45) !important;
+        border-radius: 14px !important;
+        color: #f0fdf4 !important;
+        font-weight: 700 !important;
+        font-size: 13px !important;
+        letter-spacing: 0.04em !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        text-decoration: none !important;
+        transition: all 0.25s ease !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3) !important;
+      }
+
+      .edp-card-btn:hover,
+      .feature-card__more:hover {
+        background: linear-gradient(135deg, #059669, #c5a059) !important;
+        color: #041215 !important;
+        border-color: #dfba73 !important;
+        box-shadow: 0 6px 20px rgba(16, 185, 129, 0.4) !important;
+        transform: translateX(4px) !important;
+      }
+</style>
   </head>
   <body>
-    <div id="root"><div class="prerender"><header><a href="/en/"><img src="/edplogo.svg" alt="Environment Agency – Abu Dhabi" style="height:42px;width:auto" /></a><nav><a href="/en/#about">About</a> <a href="/en/#work">Work</a> <a href="/en/#process">Process</a> <a href="/en/#studio">Studio</a> <a href="/">한국어</a></nav></header><main><section><h1>We build interactive experiences with AI. Experiences, engineered.</h1><p>Interactive software for brands, pop-up stores, AI campaigns and exhibitions. PUTURE plans it, designs it and builds it.</p></section><section><h2>Precisely designed. Vividly experienced.</h2><p>PUTURE builds AI experiences and interactive software. UX, design, development and AI integration, all within one team.</p><p>What people only watch, they forget. What they take part in becomes an experience.</p><ul><li><h3>Interactive content</h3><p>Content people take part in, at exhibitions and events. It answers to touch, cameras and sensors.</p><p>Media exhibits · Interactive walls · Kiosks</p></li><li><h3>Brand experiences</h3><p>Interactive content for pop-up stores and brand spaces, made to stay with visitors.</p><p>Pop-up stores · Showrooms · AI campaigns</p></li><li><h3>AI engineering</h3><p>LLMs, image and video generation, computer vision. The right model for the job, built to production standard.</p><p>LLM · Generative AI · Computer vision</p></li></ul></section><section><h2>We built the three programs inside KT AI Station, a WSIS Prize 2026 Champion</h2><p>What is the WSIS Prize?: The information-society award run by the ITU, the UN’s agency for digital technology. In 2026 it named KT AI Station, KT’s mobile AI classroom for schools in remote regions, a Champion.</p><ul><li>Run by: ITU · UN</li><li>Category: Access to information</li><li>Named: 2026 Champion</li></ul><ul><li><h3><a href="/en/work/kt-ai-station/#deepfake">Deepfake</a></h3><p>KT AI Station · KT · 2025 — 2026</p><p>Visitors photograph their face at the kiosk and pick a scene card. About 30 seconds later a film plays with that face swapped in, followed by how deepfake harm spreads and how to prevent it.</p></li><li><h3><a href="/en/work/kt-ai-station/#fakenews">Fake news</a></h3><p>KT AI Station · KT · 2025 — 2026</p><p>Two news reports play, and visitors pick the one made with AI or answer that both are fake. An answer film follows, then a comparison with what others chose for the same pair.</p></li><li><h3><a href="/en/work/kt-ai-station/#dcti">Digital Citizen Type Test (DCTI)</a></h3><p>KT AI Station · KT · 2025 — 2026</p><p>Twenty-seven picture items assess how visitors think, learn and act online and sort them into one of eight digital citizen types. Results come as a type card, a matching job and per-domain scores.</p></li><li><h3><a href="/en/work/jimssalabium/">Jimssalabium</a></h3><p>KT × ENA · KT Gwanghwamun building, Seoul · August 2026</p><p>A popup kiosk for Jimssalabium, an ENA travel show. It reads the barcodes on two packing cards, matches a destination and prints the result on a receipt.</p></li><li><h3><a href="/en/work/millie-genre-me/">Me in a Genre</a></h3><p>Millie’s Library × KT Onmaji · KT Onmaji flagship store, Gwanghwamun, Seoul · 2026</p><p>A Millie’s Library kiosk that finds the genre that suits a visitor from a face photo and a reading-style test, then makes a book cover with the visitor as its hero.</p></li><li><h3><a href="/en/work/todays-picnic/">Today’s Picnic</a></h3><p>KT Onmaji · KT Onmaji flagship store, Gwanghwamun, Seoul · 2026</p><p>A kiosk whose travel-style test finds a taste for travel visitors didn’t know they had. It shows the recommended place in a film, then a travel guide and places to eat.</p></li><li><h3><a href="/en/work/i-am-solo/">I Am Solo in Gwanghwamun</a></h3><p>KT Onmaji × ENA · Pop-up at the KT Onmaji flagship store, Gwanghwamun, Seoul · 2025</p><p>A portrait kiosk for the pop-up of ENA’s I Am Solo. Visitors have their face photographed, get an AI character profile and a talent-show result, and take them home by QR code and as a print.</p></li><li><h3><a href="/en/work/booking-system/">On-site booking</a></h3><p>In-house · KT AI Station venues · 2026</p><p>Visitors book a session from a printed QR code and get a text five minutes before it starts. Staff follow each session’s bookings live on the laptop on site.</p></li><li><h3><a href="/en/work/wis-2026/">WIS 2026 Interactive Player</a></h3><p>KT · KT booth, World IT Show 2026, COEX, Seoul · April 2026</p><p>A full-screen video player driven by a Taiko no Tatsujin drum controller. A hit on the left or right side plays that side’s film once, then the loop resumes.</p></li></ul></section><section><h2>From idea to something that works.</h2><p>We check every step for ourselves, and finish one experience at a time.</p><ol><li><h3>Concept: One core.</h3><p>First we decide the one thing people will remember.</p></li><li><h3>Prototype: An idea that works.</h3><p>Not with words or pictures, but with a draft that actually runs. Decisions come sooner, and there is less trial and error.</p></li><li><h3>Test: A finish that has been tested.</h3><p>We try it on the devices and in the space it is built for, so problems turn up in the studio, not on site.</p></li></ol><p>The details make the experience.</p></section><section><h2>One team. Every step.</h2><p>Every skill a project needs, on one team. Faster decisions, a higher finish.</p><ul><li>Interface: Design</li><li>Logic: Engineering</li><li>Model: Machine learning</li></ul><ul><li><h3>Design and engineering</h3><p>Interfaces designed and built by the same people.</p></li><li><h3>AI pipelines</h3><p>From input to inference to output: AI pipelines that run reliably.</p></li><li><h3>Real-time 3D</h3><p>WebGL, installations and spatial interfaces.</p></li><li><h3>Voice and gesture</h3><p>Inputs beyond the keyboard: speech, motion and presence.</p></li><li><h3>Production-grade</h3><p>Shipped, monitored and improved after launch.</p></li><li><h3>Systems thinking</h3><p>Data, models and interface designed as one loop.</p></li></ul></section><section><h2>Your next experience, with PUTURE.</h2><p>From AI experiences to interactive content. Tell us the goal and the timeline, and we’ll propose the best way to get there.</p></section></main><footer><nav><a href="/en/services/exhibition/">Exhibition experiences</a> · <a href="/en/services/popup-store/">Pop-up store experiences</a> · <a href="/en/services/ai-experience/">AI experiences</a></nav><p>PUTURE · Founder Sun Kim · 3F V1303, JS Tower, 6 Teheran-ro 79-gil, Gangnam-gu, Seoul 06158, Republic of Korea</p><p><!--email_off--><a href="mailto:info@puture.co.kr">info@puture.co.kr</a><!--/email_off--> · <a href="/en/privacy/">Privacy policy</a></p></footer></div></div>
-    <div class="shell" aria-hidden="true"><div class="scene__layer hero"><div class="hero__inner container"><div class="hero__heading"><span class="hero__slogan intro-in">We build interactive experiences with AI</span><span class="hero__title" lang="en"><div class="emerge-line shell__line"><div class="shell__word"><div class="shell__char shell__c0">E</div><div class="shell__char shell__c1">x</div><div class="shell__char shell__c2">p</div><div class="shell__char shell__c3">e</div><div class="shell__char shell__c4">r</div><div class="shell__char shell__c5">i</div><div class="shell__char shell__c6">e</div><div class="shell__char shell__c7">n</div><div class="shell__char shell__c8">c</div><div class="shell__char shell__c9">e</div><div class="shell__char shell__c10">s</div><div class="shell__char shell__c11">,</div></div></div> <div class="emerge-line shell__line"><div class="shell__word"><div class="shell__char shell__c12">e</div><div class="shell__char shell__c13">n</div><div class="shell__char shell__c14">g</div><div class="shell__char shell__c15">i</div><div class="shell__char shell__c16">n</div><div class="shell__char shell__c17">e</div><div class="shell__char shell__c18">e</div><div class="shell__char shell__c19">r</div><div class="shell__char shell__c20">e</div><div class="shell__char shell__c21">d</div><div class="shell__char shell__c22">.</div></div></div></span></div><div class="hero__side"><p class="intro-in shell__lede">Interactive software for brands, pop-up stores, AI campaigns and exhibitions. PUTURE plans it, designs it and builds it.</p><div class="hero__actions intro-in shell__actions"><span class="btn btn--primary"><span class="btn__label">See our work</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span><span class="btn btn--ghost"><span class="btn__label">Start a project</span></span></div></div></div></div></div>
+    <div id="root"><div class="prerender"><header><a href="/"><img src="/edplogo.svg" alt="Environment Agency – Abu Dhabi" style="height:42px;width:auto" /></a><nav><a href="#about">About EDP</a> <a href="#work">Applications</a> <a href="#process">Data Lifecycle</a> <a href="#studio">Catalogues</a> <a href="#contact">Contact EAD</a></nav></header><main><section><h1>We build interactive experiences with AI. Experiences, engineered.</h1><p>Interactive environmental intelligence and AI platforms for Abu Dhabi. Real-time data, spatial analysis and ecological conservation across the Emirate.</p></section><section><h2>Environmental Intelligence for Abu Dhabi.</h2><p>The Environmental Data Portal (EDP) by the Environment Agency – Abu Dhabi (EAD) unifies comprehensive environmental intelligence across air quality, marine habitats, soil conservation, and biodiversity.</p><p>Data without action is invisible. Real-time environmental intelligence drives sustainable governance.</p><ul><li><h3>Environmental Portals</h3><p>Real-time monitoring networks for air quality, groundwater, marine ecosystems, and protected nature reserves across Abu Dhabi.</p><p>Air Quality · Enviroportal · Groundwater</p></li><li><h3>AI Conservation Services</h3><p>Interactive lifelike AI avatars (Souheil & Dana), environmental chatbot advisory, and predictive ecological models powered by machine learning.</p><p>EAD Avatar · Chatbot · AI Insights</p></li><li><h3>Biodiversity Catalogues</h3><p>Comprehensive digital registries of terrestrial and marine species, spatial habitat distribution maps, and environmental compliance indices.</p><p>Abu Dhabi Nature · Naha · Biodiversity</p></li></ul></section><section><h2>24+ Specialized Environmental Platforms Powering Abu Dhabi’s Ecological Leadership</h2><p>What is the EDP?: The Environmental Data Portal (EDP) is Abu Dhabi’s official environmental data gateway, providing open scientific datasets, real-time indicators, and APIs for researchers, decision-makers, and the public.</p><ul><li>Governed by: EAD · Abu Dhabi</li><li>Coverage: Terrestrial & Marine</li><li>Platforms: 24+ Live Systems</li></ul><ul><li><h3><a href="https://avatar.ead.ae/">EAD Avatar AI</a></h3><p>Environment Agency – Abu Dhabi</p><p>Interactive bilingual AI ambassadors Souheil & Dana delivering verified environmental education.</p></li><li><h3><a href="https://envirobot.ead.ae/">Environmental Chatbot</a></h3><p>Environment Agency – Abu Dhabi</p><p>Instant conversational AI advisory for environmental regulations, licensing, and conservation guidance.</p></li><li><h3><a href="https://enviroportal.ead.ae/">Enviroportal Spatial Map</a></h3><p>Environment Agency – Abu Dhabi</p><p>Comprehensive GIS explorer mapping terrestrial ecosystems, marine zones, and environmental telemetry.</p></li><li><h3><a href="https://airquality.ead.ae/">Air Quality Portal</a></h3><p>Environment Agency – Abu Dhabi</p><p>Emirate-wide real-time air quality index monitoring across 20+ specialized stations streaming PM2.5, ozone, and meteorological parameters.</p></li><li><h3><a href="https://adnature.ead.ae/">Abu Dhabi Nature</a></h3><p>Environment Agency – Abu Dhabi</p><p>Citizen-science wildlife discovery app reporting UAE native fauna and flora observations.</p></li><li><h3><a href="https://naha.ead.ae/">Naha Sustainability</a></h3><p>Environment Agency – Abu Dhabi</p><p>Incentivized recycling and circular economy app encouraging waste reduction across the Emirate.</p></li></ul></section><section><h2>From Sensor Telemetry to Conservation Policy.</h2><p>Continuous round-the-clock monitoring, automated AI anomaly detection, and actionable Emirate-wide environmental reporting.</p><ol><li><h3>Live Sensor Ingestion</h3><p>Over 20 advanced monitoring stations, satellite feeds, and marine buoys capturing environmental parameters in real time.</p></li><li><h3>Intelligent Modelling</h3><p>Machine learning models for atmospheric dispersion, biodiversity tracking, and automated air quality compliance.</p></li><li><h3>Actionable Policy</h3><p>Strategic dashboards empowering government agencies, industrial operators, and citizens to take proactive conservation steps.</p></li></ol><p>Precision data empowers conservation.</p></section><section><h2>Integrated Ecosystem. Powered by Modern Tech.</h2><p>Real-time telemetry, predictive AI models, and intuitive interfaces built to the highest global standards.</p><ul><li>Interface — Portals & Applications</li><li>Logic — Data & Compliance Engine</li><li>Model — Environmental AI & Models</li></ul><ul><li>Air Quality Telemetry — 20+ real-time monitoring stations streaming AQI, particulate matter, and meteorological indicators.</li><li>AI Avatars & Advisory — Bilingual lifelike avatars Souheil & Dana and AI chatbot providing instant verified environmental guidance.</li><li>Geospatial Enviroportal — Interactive GIS mapping platform to analyze biodiversity, marine zones, and environmental layers.</li><li>Abu Dhabi Nature — Citizen-science platform connecting the public to UAE native wildlife, birds, and marine creatures.</li><li>Naha Sustainability — Community initiative incentivizing recycling, circular economy practices, and plastic reduction.</li><li>Compliance & Licensing — Smart permitting, real-time industrial emission audits, and regulatory compliance tracking.</li></ul></section><section><h2>Abu Dhabi EDP, Partnering for Sustainability.</h2><p>Whether you are a researcher, environmental developer, or government representative, we are here to support your data needs and scientific collaborations.</p></section></main></div></div>
+    <div class="shell" aria-hidden="true"><div class="scene__layer hero"><div class="hero__inner container"><div class="hero__heading"><span class="hero__slogan intro-in">We build interactive experiences with AI</span><span class="hero__title" lang="en"><div class="emerge-line shell__line"><div class="shell__word"><div class="shell__char shell__c0">E</div><div class="shell__char shell__c1">x</div><div class="shell__char shell__c2">p</div><div class="shell__char shell__c3">e</div><div class="shell__char shell__c4">r</div><div class="shell__char shell__c5">i</div><div class="shell__char shell__c6">e</div><div class="shell__char shell__c7">n</div><div class="shell__char shell__c8">c</div><div class="shell__char shell__c9">e</div><div class="shell__char shell__c10">s</div><div class="shell__char shell__c11">,</div></div></div> <div class="emerge-line shell__line"><div class="shell__word"><div class="shell__char shell__c12">e</div><div class="shell__char shell__c13">n</div><div class="shell__char shell__c14">g</div><div class="shell__char shell__c15">i</div><div class="shell__char shell__c16">n</div><div class="shell__char shell__c17">e</div><div class="shell__char shell__c18">e</div><div class="shell__char shell__c19">r</div><div class="shell__char shell__c20">e</div><div class="shell__char shell__c21">d</div><div class="shell__char shell__c22">.</div></div></div></span></div><div class="hero__side"><p class="intro-in shell__lede">Interactive environmental intelligence and AI platforms for Abu Dhabi. Real-time data, spatial analysis and ecological conservation across the Emirate.</p><div class="hero__actions intro-in shell__actions"><span class="btn btn--primary"><span class="btn__label">Explore Platforms</span><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"></path></svg></span><span class="btn btn--ghost"><span class="btn__label">Start a project</span></span></div></div></div></div></div>
   </body>
 </html>
 
