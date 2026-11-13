@@ -14,6 +14,7 @@ import { Route as Home2RouteImport } from './routes/home2'
 import { Route as Home3RouteImport } from './routes/home3'
 import { Route as Home4RouteImport } from './routes/home4'
 import { Route as Home5RouteImport } from './routes/home5'
+import { Route as Home6RouteImport } from './routes/home6'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -40,6 +41,11 @@ const Home5Route = Home5RouteImport.update({
   path: '/home5',
   getParentRoute: () => rootRouteImport,
 } as any)
+const Home6Route = Home6RouteImport.update({
+  id: '/home6',
+  path: '/home6',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
@@ -47,6 +53,7 @@ export interface FileRoutesByFullPath {
   '/home3': typeof Home3Route
   '/home4': typeof Home4Route
   '/home5': typeof Home5Route
+  '/home6': typeof Home6Route
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
@@ -54,6 +61,7 @@ export interface FileRoutesByTo {
   '/home3': typeof Home3Route
   '/home4': typeof Home4Route
   '/home5': typeof Home5Route
+  '/home6': typeof Home6Route
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -62,13 +70,14 @@ export interface FileRoutesById {
   '/home3': typeof Home3Route
   '/home4': typeof Home4Route
   '/home5': typeof Home5Route
+  '/home6': typeof Home6Route
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/home2' | '/home3' | '/home4' | '/home5'
+  fullPaths: '/' | '/home2' | '/home3' | '/home4' | '/home5' | '/home6'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/home2' | '/home3' | '/home4' | '/home5'
-  id: '__root__' | '/' | '/home2' | '/home3' | '/home4' | '/home5'
+  to: '/' | '/home2' | '/home3' | '/home4' | '/home5' | '/home6'
+  id: '__root__' | '/' | '/home2' | '/home3' | '/home4' | '/home5' | '/home6'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -77,6 +86,7 @@ export interface RootRouteChildren {
   Home3Route: typeof Home3Route
   Home4Route: typeof Home4Route
   Home5Route: typeof Home5Route
+  Home6Route: typeof Home6Route
 }
 
 declare module '@tanstack/react-router' {
@@ -116,6 +126,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Home5RouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/home6': {
+      id: '/home6'
+      path: '/home6'
+      fullPath: '/home6'
+      preLoaderRoute: typeof Home6RouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -125,6 +142,7 @@ const rootRouteChildren: RootRouteChildren = {
   Home3Route: Home3Route,
   Home4Route: Home4Route,
   Home5Route: Home5Route,
+  Home6Route: Home6Route,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
